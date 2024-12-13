@@ -25,7 +25,6 @@ def predict_home_price():
 @app.errorhandler(404)
 def invalid_route(e):
     return "Invalid route."
-
 if __name__ == "__main__":
     print("Starting Python Flask server for house price prediction...")
     app.run(debug = True)
