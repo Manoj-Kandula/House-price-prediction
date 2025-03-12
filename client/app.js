@@ -40,7 +40,7 @@ function onClickedEstimatePrice() {
     function (data, status) {
       console.log(data.estimated_price);
       estPrice.innerHTML =
-        "<h2>" + "Price: " + data.estimated_price.toString() + " Lakh</h2>";
+        "<h2>" + "Price: " + Math.abs(data.estimated_price).toString() + " Lakh</h2>";
       console.log(status);
     }
   );
