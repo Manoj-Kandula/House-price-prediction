@@ -1,3 +1,4 @@
+const URL = "https://house-price-prediction-7npn.onrender.com/";
 function getBathValue() {
   let uiBathrooms = document.getElementsByName("uiBathrooms");
   for (let i in uiBathrooms) {
@@ -26,7 +27,7 @@ function onClickedEstimatePrice() {
   let location = document.getElementById("uiLocations");
   let estPrice = document.getElementById("uiEstimatedPrice");
 
-  let url = "http://127.0.0.1:5000/predict_home_price";
+  let url = '${URL}predict_home_price';
 
   $.post(
     url,
@@ -47,7 +48,7 @@ function onClickedEstimatePrice() {
 
 function onPageLoad() {
   console.log("document loaded");
-  let url = "http://127.0.0.1:5000/get_location_names";
+  let url = '${URL}get_location_names';
   $.get(url, function (data, status) {
     console.log("got response for get_location_names request");
     if (data) {
