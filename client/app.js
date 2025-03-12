@@ -27,7 +27,7 @@ function onClickedEstimatePrice() {
   let location = document.getElementById("uiLocations");
   let estPrice = document.getElementById("uiEstimatedPrice");
 
-  let url = '${URL}/predict_home_price';
+  let url = `${URL}/predict_home_price`;
 
   $.post(
     url,
@@ -48,7 +48,7 @@ function onClickedEstimatePrice() {
 
 function onPageLoad() {
   console.log("document loaded");
-  let url = '${URL}/get_location_names';
+  let url = `${URL}/get_location_names`;
   $.get(url, function (data, status) {
     console.log("got response for get_location_names request");
     if (data) {
